@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+    h1 { 
+        color: azure;
+        font-weight: bold;
+    }
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        li { 
+            color: azure;
+            font-weight: bold;
+            img {
+                height: auto;
+                width: 100%;
+            }
+        } 
+    }
+}
+
+
+
