@@ -1,23 +1,104 @@
 body{
-    background-color: black;
+    background-color: #f5d393;
+    margin: 0px;
     h1 { 
+        display: flex;
+        padding: 20px;
+        background-color: #eb6765;
+        width: 100%;
+        justify-content: center;
         color: azure;
+        font-weight: bold;
+    }
+    h2 { 
+        padding: 20px;
+        justify-content: center;
+        color: #1a0b2a;
         font-weight: bold;
     }
     ul {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 20px;
+        gap: 10px;
         li { 
+            display: flex;
             color: azure;
             font-weight: bold;
+            background-color: #261329;
+            border-radius: 15%;
+            height: auto;
+            flex-direction:column;
+            justify-content: space-around;
             img {
+                margin: 10px;
                 height: auto;
-                width: 100%;
+                width: auto;
+                border-radius: 15%;
+            }
+            h3 {
+                text-decoration: underline;
+                margin: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            p {
+                margin: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            div {
+                margin: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
         } 
     }
+    section { 
+        margin: auto;
+        margin-bottom: 50px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        color: #1a0b2a;
+        padding: 20px;
+        background-color: #eb6765;
+        width: 50%;
+        justify-content: center;
+        font-weight: bold;
+        div {
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            color: #1a0b2a;
+            padding: 20px;
+            background-color: #eb6765;
+            width: 50%;
+            justify-content: center;
+            font-weight: bold;
+        }
+    }
 }
 
+.radioStock {
+    margin-left:20px;
+}
 
-
+.menos , .mas{
+    height:25px;
+    width:25px;
+    border:1px black solid;
+    border-radius:50%;
+}
+.menos:hover{
+    background-color:red;    
+    border:none;
+}
+.mas:hover{
+    background-color:green;
+    border:none;
+}
+.numero {
+    margin-left:5px;
+    margin-right:5px;
+}

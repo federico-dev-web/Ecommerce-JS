@@ -6,27 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/Styles.css">
     <title>Document</title>
-    <script src="/scripts/ecommerce.js"></script>
+    <script src="/scripts/ecommerce.js" async></script>
 </head>
 <body>
     <header>
         <h1>E-COMMERCE</h1>
-        <h2>Elegí tus productos:</h2>
+        
     </header>
     <main>
-        <ul>
-            <li><img src="./assets/images/fideos.jpg" alt=""><p>Fideos</p></li>
-            <li><img src="./assets/images/polenta.jpg" alt=""><p>Polenta</p></li>
-            <li><img src="./assets/images/porotos.jpg" alt=""><p>Porotos</p></li>
-            <li><img src="./assets/images/carne.jpg" alt=""><p>Carne</p></li>
-            <li><img src="./assets/images/pollo.jpg" alt=""><p>Pollo</p></li>
-            <li><img src="./assets/images/pan.jpg" alt=""><p>Pan</p></li>
-            <li><img src="./assets/images/agua.jpg" alt=""><p>Agua</p></li>
-            <li><img src="./assets/images/cerveza.jpg" alt=""><p>Cerveza</p></li>
-            <li><img src="./assets/images/gaseosa.webp" alt=""><p>Gaseosa</p></li>
-            <li><img src="./assets/images/leche.webp" alt=""><p>Leche</p></li>
+        <h2>Elegí tus productos, y agregá las unidades que deseas al carrito:</h2>
+        <div class = "radioStock">
+            <input id="todo" type="radio" name="stock" checked value="todo"> Mostrar todo
+            <input id="enStock" type="radio" name="stock" value="enStock"> Productos en stock
+        </div>
+        
+        <ul id="listaProductos">
         </ul>
-
+        <section >
+            <button id="verCarrito">Visualizar carrito</button>
+            <div id="carrito"></div>
+        </section>
     </main>
 
 </body>
