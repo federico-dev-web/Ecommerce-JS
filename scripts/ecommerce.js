@@ -119,7 +119,7 @@ const funcionalidadBotones = () => {
             let carritoVer = carrito.filter(el => el.cantidad>0);
             verCarrito(carritoVer);
             const p2 = document.createElement('p');
-            p2.append(`El total de la compra es de $ ${carritoVer.reduce((acc, item) => acc + item.precio, 0)}`);
+            p2.append(`El total de la compra es de $ ${carritoVer.reduce((acc, item) => acc + item.precio*item.cantidad, 0)}`);
             carritoHtml.append(p2);
             let sinStock = carritoVer.find(el => el.stock==false);
             if (sinStock != undefined ){
