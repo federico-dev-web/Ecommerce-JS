@@ -122,7 +122,7 @@ const funcionalidadBotones = () => {
             p2.append(`El total de la compra es de $ ${carritoVer.reduce((acc, item) => acc + item.precio, 0)}`);
             carritoHtml.append(p2);
             let sinStock = carritoVer.find(el => el.stock==false);
-            if (sinStock.tipo.length > 0 ){
+            if (sinStock == undefined ){
                 const p3 = document.createElement('p');
                 p3.append('Eligió productos que no se encuentran en stock, su pedido tardará una semana mas de lo previsto');
                 carritoHtml.append(p3);
