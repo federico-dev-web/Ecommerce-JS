@@ -11,7 +11,7 @@
 <body>
     <header>
         <h1>E-COMMERCE</h1>
-        
+        <button id="verCarrito">Visualizar carrito</button>
     </header>
     <main>
         <h2>Elegí tus productos, y agregá las unidades que deseas al carrito:</h2>
@@ -19,14 +19,27 @@
             <input id="todo" type="radio" name="stock" checked value="todo"> Mostrar todo
             <input id="enStock" type="radio" name="stock" value="enStock"> Productos en stock
         </div>
+        <div class = "listaTipo">
+            <input id="filtroTipo" type="list" list="tipoProducto">
+            <datalist id="tipoProducto">
+                <option value="Mostrar todo"></option>
+                <option value="Alimentos"></option>
+                <option value="Bebidas"></option>
+                <option value="Limpieza"></option>
+            </datalist>
+        </div>
         
         <ul id="listaProductos">
         </ul>
         <section >
-            <button id="verCarrito">Visualizar carrito</button>
-            <div id="carrito"></div>
+            
+            
         </section>
     </main>
+    <aside id ="asideCarrito" class="carritoInvisible">
+        <div id="carrito"></div>
+        <button id="cerrarCarrito">Cerrar carrito</button>
+    </aside>
 
 </body>
 </html>

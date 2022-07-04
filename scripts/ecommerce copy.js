@@ -10,7 +10,7 @@ const productos = [
     { tipo: "agua", precio: 93, stock: true, img: "./assets/images/agua.jpg"},
     { tipo: "cerveza", precio: 174, stock: false, img: "./assets/images/cerveza.jpg"},
     { tipo: "gaseosa", precio: 191, stock: true, img: "./assets/images/gaseosa.jpg"},
-    { tipo: "leche", precio: 102, stock: true, img: "./assets/images/leche.jpg"},
+    { tipo: "leche", precio: 102, stock: true, img: "./assets/images/leche.jpg"}
 ];
 
 // Creando carrito de compras

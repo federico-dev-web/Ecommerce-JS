@@ -2,7 +2,7 @@ body {
   background-color: #f5d393;
   margin: 0px;
 }
-body h1 {
+body header {
   display: flex;
   padding: 20px;
   background-color: #eb6765;
@@ -10,6 +10,8 @@ body h1 {
   justify-content: center;
   color: azure;
   font-weight: bold;
+  display: flex;
+  justify-content: space-around;
 }
 body h2 {
   padding: 20px;
@@ -54,7 +56,10 @@ body ul li div {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-body section {
+body aside {
+  position: absolute;
+  top: 5%;
+  right: 5%;
   margin: auto;
   margin-bottom: 50px;
   padding: 20px;
@@ -62,26 +67,42 @@ body section {
   flex-direction: column;
   color: #1a0b2a;
   padding: 20px;
-  background-color: #eb6765;
-  width: 50%;
+  background-color: #eba165;
+  width: 70%;
   justify-content: center;
   font-weight: bold;
 }
-body section div {
+body aside div {
   margin: auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
   color: #1a0b2a;
   padding: 20px;
-  background-color: #eb6765;
+  background-color: #eba165;
   width: 50%;
   justify-content: center;
   font-weight: bold;
 }
+body aside button {
+  margin: auto;
+}
+
+.carritoInvisible {
+  display: none;
+}
+
+.carritoVisible {
+  display: visible;
+}
 
 .radioStock {
   margin-left: 20px;
+}
+
+.listaTipo {
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .menos, .mas {

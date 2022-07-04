@@ -1,7 +1,7 @@
 body{
     background-color: #f5d393;
     margin: 0px;
-    h1 { 
+    header { 
         display: flex;
         padding: 20px;
         background-color: #eb6765;
@@ -9,6 +9,8 @@ body{
         justify-content: center;
         color: azure;
         font-weight: bold;
+        display: flex;
+        justify-content: space-around;
     }
     h2 { 
         padding: 20px;
@@ -53,7 +55,10 @@ body{
             }
         } 
     }
-    section { 
+    aside { 
+        position: absolute;
+        top: 5%;
+        right: 5%;
         margin: auto;
         margin-bottom: 50px;
         padding: 20px;
@@ -61,8 +66,8 @@ body{
         flex-direction: column;
         color: #1a0b2a;
         padding: 20px;
-        background-color: #eb6765;
-        width: 50%;
+        background-color: #eba165;
+        width: 70%;
         justify-content: center;
         font-weight: bold;
         div {
@@ -72,16 +77,33 @@ body{
             flex-direction: column;
             color: #1a0b2a;
             padding: 20px;
-            background-color: #eb6765;
+            background-color: #eba165;
             width: 50%;
             justify-content: center;
             font-weight: bold;
         }
+        button {
+            margin: auto;
+        }
     }
 }
 
+.carritoInvisible {
+    display: none;
+}
+
+
+.carritoVisible {
+    display: visible;
+} 
+
 .radioStock {
     margin-left:20px;
+}
+
+.listaTipo {
+    margin-left:20px;
+    margin-top: 20px;
 }
 
 .menos , .mas{
