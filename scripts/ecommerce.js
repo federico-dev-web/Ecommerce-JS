@@ -13,7 +13,7 @@ const productos = [
     { tipo: "leche", precio: 102, stock: true, img: "./assets/images/leche.jpg"},
 ];
 
-// Creando carrito de compras
+// Creando carrito de compra
 let carrito = productos;
 
 const resetearUnidadesCarrito = () => {
