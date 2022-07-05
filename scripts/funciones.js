@@ -1,17 +1,3 @@
-// Creando los objetos que se venderian en el sitio web
-
-const productos = [
-    { tipo: "fideos", precio: 155, stock: true, img: "./assets/images/fideos.jpg"},
-    { tipo: "polenta", precio: 72, stock: true, img: "./assets/images/polenta.jpg"},
-    { tipo: "porotos", precio: 85, stock: true, img: "./assets/images/porotos.jpg"},
-    { tipo: "carne", precio: 1050, stock: false, img: "./assets/images/carne.jpg"},
-    { tipo: "pollo", precio: 620, stock: true, img: "./assets/images/pollo.jpg"},
-    { tipo: "pan", precio: 200, stock: true, img: "./assets/images/pan.jpg"},
-    { tipo: "agua", precio: 93, stock: true, img: "./assets/images/agua.jpg"},
-    { tipo: "cerveza", precio: 174, stock: false, img: "./assets/images/cerveza.jpg"},
-    { tipo: "gaseosa", precio: 191, stock: true, img: "./assets/images/gaseosa.jpg"},
-    { tipo: "leche", precio: 102, stock: true, img: "./assets/images/leche.jpg"},
-];
 
 // Creando carrito de compra
 let carrito = productos;
@@ -22,7 +8,6 @@ const resetearUnidadesCarrito = () => {
     };
 };
 
-resetearUnidadesCarrito();
 
 //Funcion para crear los elementos html
 
@@ -48,7 +33,7 @@ const crearContenido = (listaVenta) => {
         agregarUnidadesMas.textContent = "+"
         agregarUnidadesSpan.className = "numero"
         agregarUnidadesSpan.id = "numero"+ item.tipo
-        agregarUnidadesSpan.textContent = "0"
+        agregarUnidadesSpan.textContent = item.cantidad
         agregarUnidadesMenos.className = "menos"
         agregarUnidadesMenos.id = "menos"+ item.tipo
         agregarUnidadesMenos.textContent = "-"
@@ -81,6 +66,7 @@ const funcionalidadBotones = () => {
             numeros.namedItem("numero"+(i.id.slice(3))).textContent = Number(numeros.namedItem("numero"+(i.id.slice(3))).textContent) + 1;
             //Sumo cantidad al carrito
             carrito.filter(el => el.tipo == (i.id.slice(3)))[0].cantidad = Number(numeros.namedItem("numero"+(i.id.slice(3))).textContent);
+            sessionStorage.setItem('carrito',JSON.stringify(carrito))
         }
     }
     //Boton Menos
@@ -92,6 +78,7 @@ const funcionalidadBotones = () => {
                 numeros.namedItem("numero"+(i.id.slice(5))).textContent = Number(numeros.namedItem("numero"+(i.id.slice(5))).textContent) - 1;
                 //Resto cantidad al carrito
                 carrito.filter(el => el.tipo == (i.id.slice(5)))[0].cantidad = Number(numeros.namedItem("numero"+(i.id.slice(5))).textContent);
+                sessionStorage.setItem('carrito',JSON.stringify(carrito))
             }
         }
     }
@@ -133,47 +120,3 @@ const funcionalidadBotones = () => {
         }
     }
 }
-
-
-//Elementos iniciales
-let listaVenta = productos;
-crearContenido(listaVenta);
-
-//Filtro de stock
-const stock = document.getElementsByName("stock");
-
-funcionalidadBotones();
-
-for (let i of stock) {
-    i.onclick = function (){
-        if (i.value === 'todo'){
-            listaProductos.replaceChildren();
-            listaVenta = productos;
-            crearContenido(listaVenta);
-            resetearUnidadesCarrito()
-            funcionalidadBotones();
-        } else if (i.value === 'enStock') {
-            listaVenta = productos.filter((item) => item.stock == true);
-            listaProductos.replaceChildren();
-            crearContenido(listaVenta);
-            resetearUnidadesCarrito()
-            funcionalidadBotones();
-        }
-    }
-}
-
-let cerrarCarrito = document.getElementById('cerrarCarrito')
-
-cerrarCarrito.addEventListener("click", ()  => {        
-    asideCarrito.classList.remove('carritoVisible')
-    asideCarrito.classList.add('carritoInvisible')}
-    )
-
-
-
-let filtroTipo = document.getElementById('filtroTipo')
-
-filtroTipo.addEventListener("click", ()  => {        
-    filtroTipo.value = ''}
-    )
-

@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/styles.css">
     <title>Document</title>
-    <script src="./scripts/ecommerce.js" async></script>
+    <script src="./scripts/objetos.js" async></script>
+    <script src="./scripts/funciones.js" async></script>
+    <script src="./scripts/flujo.js" async></script>
 </head>
 <body>
     <header>
@@ -19,27 +21,21 @@
             <input id="todo" type="radio" name="stock" checked value="todo"> Mostrar todo
             <input id="enStock" type="radio" name="stock" value="enStock"> Productos en stock
         </div>
-        <div class = "listaTipo">
-            <input id="filtroTipo" type="list" list="tipoProducto">
-            <datalist id="tipoProducto">
-                <option value="Mostrar todo"></option>
+        <div class = "listaClase">
+            <input id="filtroClase" type="list" list="claseProducto" value="Mostrar todo">
+            <datalist id="claseProducto">
+                <option value="Mostrar todo" selected></option>
                 <option value="Alimentos"></option>
                 <option value="Bebidas"></option>
                 <option value="Limpieza"></option>
             </datalist>
         </div>
-        
-        <ul id="listaProductos">
-        </ul>
-        <section >
-            
-            
-        </section>
+        <ul id="listaProductos"></ul>
+        <section ></section>
     </main>
     <aside id ="asideCarrito" class="carritoInvisible">
         <div id="carrito"></div>
         <button id="cerrarCarrito">Cerrar carrito</button>
     </aside>
-
 </body>
 </html>

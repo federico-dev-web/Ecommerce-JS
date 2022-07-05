@@ -21,7 +21,7 @@ body h2 {
 }
 body ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
   gap: 10px;
 }
 body ul li {
@@ -57,9 +57,10 @@ body ul li div {
   margin-bottom: 10px;
 }
 body aside {
-  position: absolute;
+  position: fixed;
   top: 5%;
   right: 5%;
+  min-height: 80%;
   margin: auto;
   margin-bottom: 50px;
   padding: 20px;
@@ -100,7 +101,7 @@ body aside button {
   margin-left: 20px;
 }
 
-.listaTipo {
+.listaClase {
   margin-left: 20px;
   margin-top: 20px;
 }
