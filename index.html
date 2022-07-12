@@ -9,6 +9,15 @@
     <script src="./scripts/objetos.js" async></script>
     <script src="./scripts/funciones.js" async></script>
     <script src="./scripts/flujo.js" async></script>
+
+    <!--      Librerias      -->
+
+    <!-- Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" async></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- Sweet Alert 2 -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -35,7 +44,10 @@
     </main>
     <aside id ="asideCarrito" class="carritoInvisible">
         <div id="carrito"></div>
-        <button id="cerrarCarrito">Cerrar carrito</button>
+        <div id="carritoBotones">
+            <button id="cerrarCarrito">Cerrar carrito</button>
+            <button id="finalizarCompra">Finalizar compra</button>
+        </div>
     </aside>
 </body>
 </html>

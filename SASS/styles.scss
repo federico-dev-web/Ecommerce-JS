@@ -56,7 +56,7 @@ body{
         } 
     }
     aside { 
-        position: fixed;
+        position: absolute;
         top: 5%;
         right: 5%;
         min-height: 80%;
@@ -73,15 +73,40 @@ body{
         font-weight: bold;
         div {
             margin: auto;
-            padding: 20px;
             display: flex;
             flex-direction: column;
             color: #1a0b2a;
-            padding: 20px;
             background-color: #eba165;
-            width: 50%;
+            width: 100%;
             justify-content: center;
             font-weight: bold;
+            ul {
+                display: inline-block;
+                li {
+                    background-color: #eba165;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    border-bottom: 1px solid #1a0b2a;
+                    border-radius:0%;
+                    img {
+                        margin: 10px;
+                        height: 50px;
+                        width: 50px;
+                    }
+                    span { 
+                        margin: 10px;
+                    }
+                    button { 
+                        margin: 10px;
+
+                    }
+                }
+            }
+            p { 
+                text-align: center;
+            }
         }
         button {
             margin: auto;
@@ -124,4 +149,9 @@ body{
 .numero {
     margin-left:5px;
     margin-right:5px;
+}
+#carritoBotones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

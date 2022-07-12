@@ -3,16 +3,18 @@
 
 let carritoSession = JSON.parse(sessionStorage.getItem('carrito'))
 
-if (carritoSession) {
-    carrito = carritoSession
-    crearContenido(carrito);
-} else {
-    //Iniciamos un nuevo carrito
-    resetearUnidadesCarrito();
-    //Elementos iniciales
-    let listaVenta = productos;
-    crearContenido(listaVenta);
-}
+
+
+carritoSession ? (
+        carrito = carritoSession,
+        crearContenido(carrito)
+    ) : (
+        //Iniciamos un nuevo carrito
+        resetearUnidadesCarrito(),
+        //Elementos iniciales
+        listaVenta = productos,
+        crearContenido(listaVenta)
+    )
 
 
 //Eventos para filtrar por stock
@@ -90,4 +92,31 @@ filtroClase.addEventListener("change", ()  => {
         crearContenido(listaFiltrada);
         funcionalidadBotones();
     }
+})
+
+
+// Creo elementos para filtrar por clase de producto
+
+let finalizarCompra = document.getElementById('finalizarCompra')
+
+
+//Para que la lista ande mas fluida, al clickearla se resetea
+
+finalizarCompra.addEventListener("click", ()  => {  
+let monto = carrito.reduce((acc, item) => acc + item.precio*item.cantidad, 0)
+    swal({
+        title: "Desea confirmar su compra por $ "+monto,
+        text: "Una vez confirmado, el monto será cargado en su tarjeta de crédito.",
+        icon: "info",
+        buttons: true
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                swal("Su compra ha sido procesada! Muchas gracias!!", {
+                icon: "success",
+                });
+            } else {
+                swal("Su compra continuará pendiente de confirmación");
+            }
+        });
 })
