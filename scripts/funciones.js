@@ -10,7 +10,6 @@ const resetearUnidadesCarrito = () => {
 
 
 //Funcion para crear los elementos html
-let listaProductos = document.getElementById('listaProductos');
 
 const crearContenido = (listaVenta) => {
     for (const item of listaVenta) {
@@ -43,6 +42,7 @@ const crearContenido = (listaVenta) => {
         //Agregamos los elementos creados a su elemento contenedor que es li
         lista.append(imagenProducto, nombreProducto, precioProducto, agregarUnidades);
         //Le agregamos al contenedor de la tienda cada uno de los divProducto
+        console.log(lista)
         listaProductos.append(lista);
     }
 };

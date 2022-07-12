@@ -13,6 +13,7 @@ carritoSession ? (
         resetearUnidadesCarrito(),
         //Elementos iniciales
         listaVenta = productos,
+        listaProductos = document.getElementById('listaProductos'),
         crearContenido(listaVenta)
     )
 
