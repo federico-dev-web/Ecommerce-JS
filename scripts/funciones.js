@@ -10,6 +10,7 @@ const resetearUnidadesCarrito = () => {
 
 
 //Funcion para crear los elementos html
+let listaProductos = document.getElementById('listaProductos');
 
 const crearContenido = (listaVenta) => {
     for (const item of listaVenta) {
