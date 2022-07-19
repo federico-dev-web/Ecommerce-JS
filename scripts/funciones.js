@@ -210,4 +210,14 @@ const funcionalidadBotones = () => {
     }
 }
 
+const compraFinalizada = () => { 
+    for (i in carrito) {
+        el = carrito[i].tipo
+        carrito.map(item => item.tipo == (el) ? item.cantidad = Number(0) : item)
+        document.getElementById('numero'+el).textContent = 0
+    }
+    document.getElementById('carrito').remove()
+    sessionStorage.setItem('carrito',JSON.stringify(carrito))
+}
+
 

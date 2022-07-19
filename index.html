@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/styles.css">
     <title>Document</title>
-    <script src="./scripts/objetos.js" async></script>
-    <script src="./scripts/funciones.js" async></script>
+    <script src="./scripts/objetos.js" ></script>
+    <script src="./scripts/ajax.js" async></script>
+    <script src="./scripts/funciones.js" ></script>
     <script src="./scripts/flujo.js" async></script>
 
     <!--      Librerias      -->
@@ -24,6 +25,16 @@
         <h1>E-COMMERCE</h1>
         <button id="verCarrito">Visualizar carrito</button>
     </header>
+    <input type="button" value="ver info del tiempo" id="botonClima">
+    <div id = "infoFechaClima" class="carritoInvisible">
+        <div class="contenedorHoraClima">
+            <p id = "localidad" class="clock"></p>
+            <div id="clock" class="clock"></div>
+            <div id="date" class="date"></div>
+        </div>
+        <div class="contenedorHoraClima" id = "clima">
+        </div>
+    </div>
     <main>
         <h2>Elegí tus productos, y agregá las unidades que deseas al carrito:</h2>
         <div class = "radioStock">
