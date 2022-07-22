@@ -98,5 +98,4 @@ botonClima && botonClima.addEventListener("click", () => {
     }
 
     window.onload = startTime();
-    document.getElementById("infoFechaClima").classListclassList.remove('carritoInvisible');
 })

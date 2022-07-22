@@ -17,3 +17,8 @@ const productos = [
     { tipo: "jabon en polvo", precio: 341, stock: true, img: "./assets/images/jabonEnPolvo.jpg", clase: "limpieza"},
     { tipo: "leche", precio: 102, stock: true, img: "./assets/images/leche.jpg", clase: "bebida"}
 ];
+
+/* 
+let productos = []
+fetch('/assets/JSON/productos.json').then((resp) => resp.json()).then( data => { productos = data}) 
+*/
