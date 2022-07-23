@@ -40,7 +40,7 @@ botonClima && botonClima.addEventListener("click", () => {
                 imagen = './assets/iconosClima/algoDeLluvia.png'
             } else if (ver ==  'Despejado'||ver == 'Despejado con humo'){
                 imagen = './assets/iconosClima/despejado.png'
-            } else if (ver == 'Cubierto con lluvia en la hora anterior'||ver == 'Nublado con precipitación a la vista'){
+            } else if (ver == 'Cubierto con lluvia en la hora anterior'||ver == 'Nublado con precipitación a la vista' ||ver == 'Cubierto con llovizna'){
                 imagen = './assets/iconosClima/lluvia.png'
             } else if (ver == 'Cubierto con nevada'||ver == 'Cielo invisible con nevada'){
                 imagen = './assets/iconosClima/nieve.png'
