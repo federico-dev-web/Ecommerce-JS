@@ -50,6 +50,8 @@ botonClima && botonClima.addEventListener("click", () => {
                 imagen = './assets/iconosClima/parcialmenteNublado.png'
             } else if (ver == 'Cubierto con lluvia'){
                 imagen = './assets/iconosClima/tormenta.png'
+            } else {
+                imagen = './assets/iconosClima/parcialmenteNublado.png'
             }
             
             document.getElementById("localidad").textContent = tiempo[0].name
