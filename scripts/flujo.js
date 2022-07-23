@@ -115,9 +115,8 @@ let monto = carrito.reduce((acc, item) => acc + item.precio*item.cantidad, 0)
             if (willDelete) {
                 swal("Su compra ha sido procesada! Muchas gracias!!", {
                 icon: "success",
-                },
-                compraFinalizada()
-                );
+                });
+                compraFinalizada();
             } else {
                 swal("Su compra continuará pendiente de confirmación");
             }
